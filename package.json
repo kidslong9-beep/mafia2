@@ -1,0 +1,20 @@
+{
+  "name": "mafia-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time Mafia multiplayer game website and Telegram Mini App foundation",
+  "main": "server.js",
+  "scripts": {"start":"node server.js", "dev":"node --watch server.js"},
+  "engines": {"node": ">=20"},
+  "dependencies": {
+    "@socket.io/redis-adapter": "^8.3.0",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "pg": "^8.13.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "socket.io": "^4.8.1"
+  }
+}

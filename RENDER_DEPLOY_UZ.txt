@@ -1,0 +1,13 @@
+MAFIA ONLINE — Render deployment
+
+1. Extract this ZIP on your computer.
+2. Create a new GitHub repository.
+3. Upload ALL extracted files and folders, keeping the top-level render.yaml and mafia_online_project folder.
+4. On Render choose New + > Blueprint, connect the GitHub repository, and apply the Blueprint.
+5. Wait for deploy to finish, then open the Render URL and test /api/health.
+
+The Render service uses rootDir mafia_online_project, buildCommand npm install, startCommand npm start, and health check /api/health.
+
+Optional login configuration: Google OAuth needs GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL; Telegram Mini App auth needs TELEGRAM_BOT_TOKEN. Add them in Render service Environment settings. Do not put secrets in public GitHub files.
+
+Important: this starter keeps room/game state in server memory; rooms are lost when the service restarts. For a public production game, add persistent database/session storage and load testing.
